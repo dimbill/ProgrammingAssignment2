@@ -3,8 +3,18 @@
 
 ## Write a short comment describing this function
 
-makeCacheMatrix <- function(x = matrix()) {
 
+makeCacheMatrix <- function(mat= matrix()) {
+      
+      inv<- NULL
+      set.matrix<- function(arg) mat<<- arg
+      get.matrix<- function() mat
+      
+      set.inv <- function(arg) inv<<- arg
+      get.inv<- function() inv
+      
+      list(set.matrix= set.matrix, get.matrix= get.matrix,
+           set.inv= set.inv, get.inv= get.inv)
 }
 
 
